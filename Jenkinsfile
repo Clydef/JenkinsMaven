@@ -17,7 +17,7 @@ pipeline {
             steps {
                 echo 'Testing..'
                 sh 'mvn clean test'
-                junit '**/target/test-classes/com/qualogy/*.xml'
+                junit '**/target/surefire-reports/*.xml'
             }
         }
         stage('Deploy') {
